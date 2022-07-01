@@ -1,7 +1,6 @@
 // Model Dependancies 
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const { truncate } = require('./User');
 
 // Create POST model (Create)
 class Watch extends Model {
