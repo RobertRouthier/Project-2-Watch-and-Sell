@@ -9,3 +9,4 @@ router.use('/comments', commentRoutes);
 router.use('/watch', watchRoutes);
 
 module.exports = router;
+
