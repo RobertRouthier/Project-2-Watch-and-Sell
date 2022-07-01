@@ -44,5 +44,20 @@ app.use(routes);
 
 // Connection link to db and server
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log(`\nNow listening and running on ${PORT}!\n`));
 });
+
+// Jest Function test for fun :)
+
+const Arithmetic = require('./arithmetic');
+
+const value = new Arithmetic(4)
+  .plus(8)
+  .plus(15)
+  .minus(16)
+  .minus(23)
+  .plus(42)
+  .plus(108)
+  .value();
+
+console.log("\n-----TEST", value, "COMPLETED-----\n");
