@@ -20,7 +20,7 @@ Comment.init(
           key: 'id'
         }
       },
-      whiskey_id: {
+      watch_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {

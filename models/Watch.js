@@ -1,6 +1,7 @@
 // Model Dependancies 
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const { truncate } = require('./User');
 
 // Create POST model (Create)
 class Watch extends Model {
@@ -41,7 +42,7 @@ Watch.init(
             allowNull: false
         },
         model: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false
         },
         price: {
@@ -50,11 +51,11 @@ Watch.init(
         },
         condition: {
             type: DataTypes.TEXT,
-            allowNull: false
+            allowNull: true
         },
         location: {
             type: DataTypes.TEXT,
-            allowNull: false
+            allowNull: true
         },
         user_id: {
             type: DataTypes.INTEGER,
