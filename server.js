@@ -5,16 +5,15 @@ const path = require('path');
 
 const helpers = require('./utils/helpers');
 
+// Import express-session
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({ helpers });
+const session = require('express-session');
 
 const app = express();
 const PORT = process.env.PORT || 8889;
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
-// Import express-session
-const exphbs = require('express-handlebars');
-const hbs = exphbs.create({ helpers });
-const session = require('express-session');
 
 // Set up sessions
 const sess = {
