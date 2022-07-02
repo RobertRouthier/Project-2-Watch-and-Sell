@@ -21,7 +21,7 @@ const sess = {
   secret: 'watchesonsale',
   cookie: {
         // Session will automatically expire in 5 minutes
-        expires: 30000
+        expires: 100 * 30 * 1000
   },
   resave: true,
   rolling: true,
