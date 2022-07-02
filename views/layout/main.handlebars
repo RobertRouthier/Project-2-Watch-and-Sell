@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title> Watch and Sell </title>
 </head>
 <body>
     <!-- Header Container -->
     <header>
         <!-- Work on Header format -->
+        <h1><i class="bi bi-watch"></i> Available Watches</h1>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav m-auto">
+                <a class="nav-item nav-link" href="/">Home</a>
 
        {{#if loggedIn}}
 
         <!-- Work on loggedin format -->
+        <a class="nav-item nav-link" href="/availability">Availability</a>
+                    <a id="logout" class="nav-item nav-link">Logout</a>
 
        {{else}}
        <!-- Work on else format -->
+       <a class="nav-item nav-link" href="/login">Login</a>
 
        {{/if}}
+       </div>
+       </div>
+       </nav> 
     </header>
     
     <!-- Main Body Container -->

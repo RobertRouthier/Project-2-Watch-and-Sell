@@ -35,7 +35,7 @@ router.get('/', withAuth, (req, res) => {
         ]
       })
 
-      // Render for availability.handlebar
+      // Render for availability.handlebars
         .then(dbWatchData => {
           const watches = dbWatchData.map(watch => watch.get({ plain: true }));
           res.render('availability', {watches, loggedIn: true});

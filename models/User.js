@@ -11,23 +11,23 @@ class User extends Model {
     }
 }
 
-// Const to validate email input
-// Regex email validation pulled from https://www.regular-expressions.info/email.html
-const validateEmail = (email) => {
-	const valid = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(email);
-	if (valid) {
-		return true;
-	} else {
-		return "Please enter a valid email address"
-	}
-}
-// Const to validate id input = cannot be NULL
-const validateId = (id) => {
-	if (!id) {
-		return "Input cannot be blank. Please try again."
-	} 
-	return true;
-}
+// // Const to validate email input
+// // Regex email validation pulled from https://www.regular-expressions.info/email.html
+// const validateEmail = (email) => {
+// 	const valid = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(email);
+// 	if (valid) {
+// 		return true;
+// 	} else {
+// 		return "Please enter a valid email address"
+// 	}
+// }
+// // Const to validate id input = cannot be NULL
+// const validateId = (id) => {
+// 	if (!id) {
+// 		return "Input cannot be blank. Please try again."
+// 	} 
+// 	return true;
+// }
 
 // Table Columns and Configs definitions
 User.init(
@@ -43,15 +43,16 @@ User.init(
         username: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
-            validate: { validateId }
+            unique: true
         },
         // Email Column
         email: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
-            validate: { validateEmail }
+            validate: { 
+                isEmail: true
+             }
         },
         // Password Column
         password: {
