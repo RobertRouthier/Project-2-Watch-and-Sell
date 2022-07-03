@@ -48,7 +48,7 @@ sequelize.sync({ force: false }).then(() => {
 
 // Jest Function test for fun :)
 
-const Arithmetic = require('./arithmetic');
+const Arithmetic = require('./test/arithmetic');
 
 const value = new Arithmetic(4)
   .plus(8)
