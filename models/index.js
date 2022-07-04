@@ -56,4 +56,4 @@ Watch.hasMany(Comment, {
     foreignKey: 'watch_id'
 });
 
-module.exports = {User, Watch, Like, Comment};
+module.exports = {User, Watch, Likes, Comment};
