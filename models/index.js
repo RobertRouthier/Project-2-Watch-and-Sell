@@ -2,7 +2,7 @@
 const User = require('./User');
 const Watch = require('./Watch');
 const Comment = require('./Comment');
-const Like = require('./Like');
+const Likes = require('./Likes');
 
 User.hasMany(Watch, {
     foreignKey: 'user_id'
@@ -13,30 +13,30 @@ Watch.belongsTo(User, {
 });
 
 User.belongsToMany(Watch, {
-    through: Like,
+    through: Likes,
     as: 'liked_watch',
     foreignKey: 'user_id'
 });
 
 Watch.belongsToMany(User, {
-    through: Like,
+    through: Likes,
     as: 'liked_watch',
     foreignKey: 'watch_id'
 });
 
-Like.belongsTo(User, {
+Likes.belongsTo(User, {
     foreignKey: 'user_id'
 });
   
-Like.belongsTo(Watch, {
+Likes.belongsTo(Watch, {
     foreignKey: 'watch_id'
 });
 
-User.hasMany(Like, {
+User.hasMany(Likes, {
     foreignKey: 'user_id'
 });
   
-Watch.hasMany(Like, {
+Watch.hasMany(Likes, {
     foreignKey: 'watch_id'
 });
 
