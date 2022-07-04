@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Watch, User, Like, Comment } = require('../models');
+const { Watch, User, Likes, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Get all Watches for availability.handlebars
@@ -17,7 +17,7 @@ router.get('/', withAuth, (req, res) => {
             'price',
             'condition',
             'location',
-            [sequelize.literal('(SELECT COUNT(*) FROM like WHERE watch.id = like.watch_id)'), 'like_count']
+            [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE watch.id = likes.watch_id)'), 'likes_count']
         ],
         include: [
           {
@@ -59,7 +59,7 @@ router.get('/watch/:id', (req, res) => {
         'price',
         'condition',
         'location',
-        [sequelize.literal('(SELECT COUNT(*) FROM like WHERE watch.id = like.watch_id)'), 'like_count']
+        [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE watch.id = likes.watch_id)'), 'likes_count']
       ],
       include: [
         {

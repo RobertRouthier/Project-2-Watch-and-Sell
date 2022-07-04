@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
             'condition',
             'location',
             'user_id',
-            [sequelize.literal('(SELECT COUNT(*) FROM like WHERE watch.id = like.watch_id)'), 'like_count']
+            [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE watch.id = likes.watch_id)'), 'likes_count']
           ],
           include: [
             {

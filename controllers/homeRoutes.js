@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Watch, User, Like, Comment } = require('../models');
+const { Watch, User, Likes, Comment } = require('../models');
 
 // Login Route
 router.get('/login', (req, res) => {
@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
         'price',
         'condition',
         'location',
-        [sequelize.literal('(SELECT COUNT(*) FROM like WHERE watch.id = like.watch_id)'), 'like_count']
+        [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE watch.id = likes.watch_id)'), 'likes_count']
       ],
       include: [
         {
@@ -64,7 +64,7 @@ router.get('/watch/:id', (req, res) => {
       'price',
       'condition',
       'location',
-      [sequelize.literal('(SELECT COUNT(*) FROM like WHERE watch.id = like.watch_id)'), 'like_count']
+      [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE watch.id = likes.watch_id)'), 'likes_count']
     ],
     include: [
       {
