@@ -21,11 +21,11 @@
 
        {{#if loggedIn}}
         <!-- Work on loggedin format -->
-        <a class="nav-item nav-link" href="/views/availability.handlebars">Availability</a>
+        <a class="nav-item nav-link" href="/availability">Availability</a>
         <a id="logout" class="nav-item nav-link">Logout</a>
        {{else}}
        <!-- Work on else format -->
-       <a class="nav-item nav-link" href="/views/login.handlebars">Login</a>
+       <a class="nav-item nav-link" href="/login">Login</a>
        {{/if}}
        </div>
        </div>
@@ -48,7 +48,7 @@
 
     <!-- Logout Option -->
 {{#if loggedIn}}
-<script src="/public/js/logout.js"></script>
+<script src="/javascript/logout.js"></script>
 {{/if}}
 </body>
 </html>
