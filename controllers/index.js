@@ -9,7 +9,7 @@ router.use('/', homeRoutes);
 router.use('/availabilty', availabilityRoutes);
 
 router.use((req, res) => {
-  res.send("<h1>Wrong Route!</h1>")
+  res.send("<h1>The webpage cannot be found!</h1>")
     res.status(404).end();
   });
   
