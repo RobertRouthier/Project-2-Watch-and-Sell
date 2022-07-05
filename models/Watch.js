@@ -19,7 +19,6 @@ class Watch extends Model {
                     'model',
                     'price',
                     'condition',
-                    'location',
                     'user_id',
                     [sequelize.literal('(SELECT COUNT * FROM likes WHERE watch.id = likes.watch_id)'), 'likes_count']
                 ]
@@ -49,10 +48,6 @@ Watch.init(
             allowNull: true
         },
         condition: {
-            type: DataTypes.TEXT,
-            allowNull: true
-        },
-        location: {
             type: DataTypes.TEXT,
             allowNull: true
         },

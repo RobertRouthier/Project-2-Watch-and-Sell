@@ -2,14 +2,6 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Watch, User, Likes, Comment } = require('../models');
 
-// Login Route
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-  res.render('login');
-});
 
 // Get all Watches render homepage
 router.get('/', (req, res) => {
@@ -50,6 +42,15 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
       });
   });
+
+  // Login Route
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
 
   // GET Watch by ID - watch-container.handlebars
 router.get('/watch/:id', (req, res) => {

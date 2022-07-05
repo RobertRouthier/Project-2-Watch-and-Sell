@@ -38,7 +38,7 @@
         </div>
         <div>
             <label for="model">What is the model number for the watch?</label>
-            <input type="text" id="model" />
+            <input type="number" id="model" />
         </div>
         <div>
             <label for="price">What is the price for the watch?</label>
@@ -46,7 +46,13 @@
         </div>
         <div>
             <label for="condition">What is the condition of the watch??</label>
-            <input type="text" id="condition" />
+            <input list="conditions" id="condition" />
+            <datalist id="conditions">
+                <option value="NEW">
+                <option value="Slightly Worn">
+                <option value="Worn">
+                <option value="Vintage">
+            </datalist>
         </div>
         <div>
             <label for="location">Where are you located?</label>
