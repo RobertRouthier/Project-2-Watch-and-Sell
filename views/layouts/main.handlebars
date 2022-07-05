@@ -20,15 +20,12 @@
                 <a class="nav-item nav-link" href="/">Home</a>
 
        {{#if loggedIn}}
-
         <!-- Work on loggedin format -->
-        <a class="nav-item nav-link" href="/availability">Availability</a>
+        <a class="nav-item nav-link" href="/views/availability.handlebars">Availability</a>
         <a id="logout" class="nav-item nav-link">Logout</a>
-
        {{else}}
        <!-- Work on else format -->
-       <a class="nav-item nav-link" href="/login">Login</a>
-
+       <a class="nav-item nav-link" href="/views/login.handlebars">Login</a>
        {{/if}}
        </div>
        </div>

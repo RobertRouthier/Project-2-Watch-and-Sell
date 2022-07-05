@@ -2,6 +2,7 @@ const express = require('express');
 const routes = require('./controllers');
 const sequelize = require('./config/connection.js');
 const path = require('path');
+const errorHandler = require('errorhandler');
 
 const helpers = require('./utils/helpers');
 
@@ -40,6 +41,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(routes);
+app.use(errorHandler());
 
 // Connection link to db and server
 sequelize.sync({ force: false }).then(() => {
