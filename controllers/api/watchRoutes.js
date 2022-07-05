@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Watch, Comment, Like } = require('../../models');
+const { User, Watch, Comment, Likes } = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
 
@@ -103,7 +103,7 @@ router.post('/', withAuth, (req, res) => {
 // PUT Watch liking route
 router.put('/uplike', withAuth, (req, res) => {
     if (req.session) {
-      Watch.uplike({ ...req.body, user_id: req.session.user_id }, { Like, Comment, User })
+      Watch.uplike({ ...req.body, user_id: req.session.user_id }, { Likes, Comment, User })
         .then(updatedLikeData => res.json(updatedLikeData))
         .catch(err => {
           console.log(err);
