@@ -2,11 +2,11 @@ const router = require('express').Router();
 
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes.js');
-const availRoutes = require('./availRoutes.js');
+const availabilityRoutes = require('./availabilityRoutes.js');
 
 router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
-router.use('/availabilty', availRoutes);
+router.use('/availabilty', availabilityRoutes);
 
 router.use((req, res) => {
   res.send("<h1>Wrong Route!</h1>")
