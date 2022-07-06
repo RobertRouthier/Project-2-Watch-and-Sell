@@ -8,9 +8,9 @@ router.use('/api', apiRoutes);
 router.use('/availability', availabilityRoutes);
 router.use('/', homeRoutes);
 
-router.use((req, res) => {
-  res.send("<h1>The webpage cannot be found!</h1>")
-    res.status(404).end();
-  });
+// router.use((req, res) => {
+//   res.send("<h1>The webpage cannot be found!</h1>")
+//     res.status(404).end();
+//   });
   
   module.exports = router;
