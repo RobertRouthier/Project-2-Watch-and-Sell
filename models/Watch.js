@@ -5,7 +5,7 @@ const sequelize = require('../config/connection');
 // Create POST model (Create)
 class Watch extends Model {
     static uplike(body, models) {
-        return models.Like.create({
+        return models.Likes.create({
             user_id: body.user_id,
             watch_id: body.watch_id
         }).then(() => {
@@ -16,7 +16,7 @@ class Watch extends Model {
                 attributes: [
                     'id',
                     'name',
-                    'model',
+                    'modelno',
                     'price',
                     'condition',
                     'location',
@@ -40,7 +40,7 @@ Watch.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        model: {
+        modelno: {
             type: DataTypes.TEXT,
             allowNull: false
         },

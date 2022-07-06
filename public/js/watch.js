@@ -2,7 +2,7 @@ async function newWatchHandler(event) {
     event.preventDefault();
   
     const name = document.querySelector('#watch').value.trim();
-    const model = document.querySelector('#model').value.trim();
+    const modelno = document.querySelector('#modelno').value.trim();
     const price = document.querySelector('#price').value.trim();
     const condition = document.querySelector('#condition').value.trim();
     const location = document.querySelector('#location').value.trim();
@@ -11,7 +11,7 @@ async function newWatchHandler(event) {
       method: 'POST',
       body: JSON.stringify({
         name,
-        model,
+        modelno,
         price,
         condition,
         location
