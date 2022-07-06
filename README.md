@@ -2,7 +2,7 @@
 Create a mysql database and application backend for an e-commerce site. Built using MySQL2, Express, Sequelize and dotenv.
 
 <p align = "center">
-<img alt="preview" src="./imgs/Demo.png">
+<img alt="preview" src="./public/imgs/demo.png">
 </p>
 
 ## User Story
@@ -130,20 +130,20 @@ Enter `password` when promted
 ## License
 
 * Copyright 2022 Philip Hwang
-* This repository is licensed under the [MIT license](./LICENSE).
+* This repository is licensed under the [MIT license](./LICENSE)
 
 ## Questions
 
 If you have any questions, please contact us at: 
 ### GitHub: 
 
-* [Robert Routhier](https://github.com/robertrouthier).
-* [John Seely](https://github.com/jokase97).
-* [Elsa Soprano](https://github.com/elsasuprano).
-* [Philip Hwang](https://github.com/phwang93).
+* [Robert Routhier](https://github.com/robertrouthier)
+* [John Seely](https://github.com/jokase97)
+* [Elsa Soprano](https://github.com/elsasuprano)
+* [Philip Hwang](https://github.com/phwang93)
 ### Repo: 
 
-[Project-2- Watch And Sell](https://github.com/phwang93/Project-2-Watch-and-Sell).
+[Project-2- Watch And Sell](https://github.com/phwang93/Project-2-Watch-and-Sell)
 
 ### Deployed:
 

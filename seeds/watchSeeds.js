@@ -2,8 +2,8 @@ const { Watch } = require('../models');
 
 const watchData = [
     {
-        name: 'Rolex Submariner DATE',
-        model: '126610LN',
+        name: 'Rolex Day Date 40',
+        model: '228238',
         // Data Truncated ERROR
         // price: '$20,000',
         // condition: 'Good',
