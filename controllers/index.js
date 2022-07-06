@@ -5,8 +5,8 @@ const homeRoutes = require('./homeRoutes.js');
 const availabilityRoutes = require('./availabilityRoutes.js');
 
 router.use('/api', apiRoutes);
+router.use('/availability', availabilityRoutes);
 router.use('/', homeRoutes);
-router.use('/availabilty', availabilityRoutes);
 
 router.use((req, res) => {
   res.send("<h1>The webpage cannot be found!</h1>")
