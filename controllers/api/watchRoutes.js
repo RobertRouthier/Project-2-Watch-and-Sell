@@ -104,7 +104,7 @@ router.post('/', withAuth, (req, res) => {
 router.put('/uplike', withAuth, (req, res) => {
     if (req.session) {
       Watch.uplike({ ...req.body, user_id: req.session.user_id }, { Likes, Comment, User })
-        .then(updatedLikeData => res.json(updatedLikeData))
+        .then(updatedLikesData => res.json(updatedLikesData))
         .catch(err => {
           console.log(err);
           res.status(500).json(err);

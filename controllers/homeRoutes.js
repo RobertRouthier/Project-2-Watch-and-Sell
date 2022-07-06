@@ -90,8 +90,8 @@ router.get('/watch/:id', (req, res) => {
 
       const watch = dbWatchData.get({ plain: true });
 
-      // Render for watch-container.handlebar
-      res.render('watch-container', {
+      // Render for single-watch.handlebar
+      res.render('single-watch', {
           watch,
           loggedIn: req.session.loggedIn
         });
