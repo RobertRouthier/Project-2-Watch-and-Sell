@@ -16,10 +16,22 @@ async function loginFormHandler(event) {
   
       if (response.ok) {
         document.location.replace('/');
+        alert('You have Successfully Logged In');
       } else {
-        alert(response.statusText('Wrong Username or Password!'));
+        alert(response.statusText);
       }
     }
   }
+
+  // Hide Password Function
+
+  const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#id_password');
+
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+});
 
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);

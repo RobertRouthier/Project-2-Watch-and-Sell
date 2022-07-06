@@ -1,10 +1,13 @@
-html {
-    font-family: 'Roboto', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 
+
+body {
+    font-family: 'Kanit', sans-serif;
+}
 
 header {
     text-align: center;
+    padding: 20px 0 0 0;
 }
 
 main {
@@ -15,6 +18,7 @@ main {
 footer {
     text-align: center; 
     text-decoration: none;
+    padding: 20px 0 0 0;
 }
 
 .comment-body {

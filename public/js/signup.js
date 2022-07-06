@@ -18,6 +18,7 @@ async function signupFormHandler(event) {
     
         if (response.ok) {
           document.location.replace('/');
+          alert(('Welcome! You are also Logged In!'))
         } else {
           alert(response.statusText);
         }
