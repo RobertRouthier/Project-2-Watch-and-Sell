@@ -40,7 +40,7 @@ router.get('/', withAuth, (req, res) => {
           const watches = dbWatchData.map(watch => watch.get({ plain: true }));
           res.render('availability', {
             watches, 
-            loggedIn: req.session.loggedIn
+            loggedIn: true
           });
         })
         .catch(err => {
