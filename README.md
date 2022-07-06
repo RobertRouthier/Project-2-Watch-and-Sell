@@ -1,5 +1,6 @@
 # Project-2- Watch And Sell
-Create a mysql database and application backend for an e-commerce site. Built using MySQL2, Express, Sequelize and dotenv.
+
+You and your group will use everything you’ve learned over the past modules to create a real-world full-stack application that you’ll be able to showcase to potential employers.
 
 <p align = "center">
 <img alt="preview" src="./public/imgs/demo.png">
@@ -8,19 +9,30 @@ Create a mysql database and application backend for an e-commerce site. Built us
 ## User Story
 
 ```md
-AS a Buyer I want to: 
+AS a BUYER I want to: 
+
 - View Available Watches on Sale
+
 - Sign Up or Login to View all the Features from the App
+
 - View previous Comments from different Users for each Watch
+
 - Read Comments and Like the Watches Available
+
 - Logout after being Done Searching
 
-AS a Seller I want to:
+AS a SELLER I want to:
+
 - Login to View all the Features from the App
+
 - View My Watches posted for Sale
+
 - View Comments and Likes for All Featured Watches
+
 - Delete MY previous Watch Posts
+
 - Logout after being Done
+
 ```
 
 ## Acceptance Criteria
