@@ -16,7 +16,7 @@ class Watch extends Model {
                 attributes: [
                     'id',
                     'name',
-                    'modelno',
+                    'model',
                     'price',
                     'condition',
                     'location',
@@ -40,7 +40,7 @@ Watch.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        modelno: {
+        model: {
             type: DataTypes.TEXT,
             allowNull: false
         },
