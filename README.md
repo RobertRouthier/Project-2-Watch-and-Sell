@@ -3,7 +3,7 @@
 You and your group will use everything you’ve learned over the past modules to create a real-world full-stack application that you’ll be able to showcase to potential employers.
 
 <p align = "center">
-<img alt="preview" src="./public/imgs/demo.png>
+<img alt="preview" src="./public/imgs/demo.png">
 </p>
 
 ## User Story
