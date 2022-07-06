@@ -4,8 +4,7 @@ const { Watch, User, Likes, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Get all Watches for availability.handlebars
-router.get('/', (req, res) => {
-  console.log("HIT AVAIL ROUTE")
+router.get('/', withAuth, (req, res) => {
     console.log(req.session);
     Watch.findAll({
         where: {
@@ -59,7 +58,7 @@ router.get('/watch/:id', (req, res) => {
       attributes: [
         'id',
         'name',
-        'modelno',
+        'model',
         'price',
         'condition',
         'location',

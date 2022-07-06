@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
         attributes: [
             'id',
             'name',
-            'modelno',
+            'model',
             'price',
             'condition',
             'location',
@@ -87,7 +87,7 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
     Watch.create({
       name: req.body.name,
-      modelno: req.body.modelno,
+      model: req.body.model,
       price: req.body.price,
       condition: req.body.condition,
       location: req.body.location,
