@@ -4,6 +4,7 @@ const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes.js');
 const availabilityRoutes = require('./availabilityRoutes.js');
 
+router.use('/availabilty', availabilityRoutes);
 router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
 router.use('/availabilty', availabilityRoutes);
