@@ -19,7 +19,7 @@ footer {
 
 .comment-body {
     height: 120px;
-    width: 590px;
+    width: 550px;
 }
 
 #watch-pic {
@@ -33,4 +33,16 @@ footer {
 a {
     text-decoration: none;
     color: black;
+}
+
+#comment-btn{
+    width: 150px;
+}
+
+#uplike-btn{
+    width: 150px;
+}
+
+#delete-watch-btn{
+    width: 150px;
 }
