@@ -17,7 +17,7 @@ async function deleteFormHandler(event) {
       
       if (response.ok) {
         document.location.replace('/availability/');
-        alert('Selected Watch has been deleted!');
+        alert('Watch has been deleted!');
       } else {
         alert(response.statusText);
       }
