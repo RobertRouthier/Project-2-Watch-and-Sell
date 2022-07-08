@@ -18,7 +18,7 @@ async function loginFormHandler(event) {
         document.location.replace('/');
         alert('You have Successfully Logged In');
       } else {
-        alert(response.statusText);
+        alert('Wrong username or Password!');
       }
     }
   }

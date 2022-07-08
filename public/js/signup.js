@@ -18,9 +18,9 @@ async function signupFormHandler(event) {
     
         if (response.ok) {
           document.location.replace('/');
-          alert(('Welcome! You are also Logged In!'))
+          alert('Welcome! You are also Logged In!')
         } else {
-          alert(response.statusText);
+          alert('Username already exists. Please choose a different username.');
         }
       }
   }
