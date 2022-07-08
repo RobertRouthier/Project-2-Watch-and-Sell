@@ -62,6 +62,7 @@ router.get('/watch/:id', (req, res) => {
         'price',
         'condition',
         'location',
+        'user_id',
         [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE watch.id = likes.watch_id)'), 'likes_count']
       ],
       include: [
@@ -87,10 +88,13 @@ router.get('/watch/:id', (req, res) => {
 
         const watch = dbWatchData.get({ plain: true });
 
+        console.log( watch, req.session);
+
         // Render for single-watch.handlebar
         res.render('single-watch', {
             watch,
-            loggedIn: req.session.loggedIn
+            loggedIn: req.session.loggedIn,
+            isowner: watch.user_id === req.session.user_id
           });
       })
       .catch(err => {

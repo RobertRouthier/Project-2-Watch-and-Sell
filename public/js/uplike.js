@@ -18,7 +18,7 @@ async function uplikeClickHandler(event) {
       if (response.ok) {
         document.location.reload();
       } else {
-        alert(response.statusText);
+        alert(('Watch LIKED! Refresh the page.'))
       }
   }
   

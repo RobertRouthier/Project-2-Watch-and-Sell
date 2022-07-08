@@ -116,7 +116,8 @@ router.put('/uplike', withAuth, (req, res) => {
 router.delete('/:id', withAuth, (req, res) => {
     Watch.destroy({
       where: {
-        id: req.params.id
+        id: req.params.id,
+        user_id: req.session.user_id
       }
     })
       .then(dbWatchData => {
