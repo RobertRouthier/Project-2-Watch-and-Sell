@@ -68,7 +68,7 @@ AS a SELLER I want to:
 ```
 ## Project Deployed URL 
 
-Deployed APP on Heroku: [Heroku](https://watch-sell-app.herokuapp.com)
+Deployed APP on Heroku: [Watch & Sell](https://watch-sell-app.herokuapp.com)
 ## Table of Contents
 
 - [Project-2- Watch And Sell](#project-2--watch-and-sell)
@@ -159,4 +159,4 @@ If you have any questions, please contact us at:
 
 ### Deployed:
 
-[Heroku](https://watch-sell-app.herokuapp.com)
+[Watch & Sell](https://watch-sell-app.herokuapp.com)
